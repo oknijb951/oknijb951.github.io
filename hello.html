@@ -45,6 +45,8 @@
 	.bu {margin-bottom: 100px;}
 	
 	#panel { display: none;}
+	
+	li { margin-bottom: 15px; font-size: 15px; font-weight: 500; }
     
     </style>
     
@@ -343,28 +345,23 @@ function controller() {
     </script>
 
   </head>
-  <body>
-		<div style="display: flex; margin: 50px;" >
+  <body style="padding-top: 0px; height: fit-content;">
+		<div style="display: flex; margin: 20px 50px;" >
 			<div style="width: 50%;">
 			<h1 id="hi2">Hello world</h1>
 			
 			<p id='test'></p>
 			
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+				<ol>
+					<li>First you need to create your own turtle. Lets start by giving a name to your turtle, write the name of your turtle in Line 2. Example (Max etc)</li>
+					<li>Now you need to call the turtle library. Add Turtle() in line number 2. *Add this:* Max = Turtle()</li>
+					<li>Lets choose a turtle shape for you turtle. To do so go to Line 3 and add "Max.shape('turtle')"</li>
+					<li>Add a color to your turtle. Go to line 4 and add "Max.color('red')". You can choose any color you wish</li>
+					<li>Click the run button to see  your turtle</li>
+					<li>It's time to make our turtle move, when the turtle move it draws a line behind it. 	To make the turtle move, add the forward command and give it the length to move.	Go to line 5 and add *Max.forward(100)*, remember the bigger the number the longer the line will be</li>
+					<li>Click RUN to draw a line</li>
+				</ol>
 			
-			<p>Aliquam sem et tortor consequat. </p>
-			
-			<p>Integer vitae justo eget magna fermentum iaculis eu non. </p>
-			
-			<kbd>from turtle import *</kbd>
-			
-			<p>
-				
-			<p>Cras pulvinar mattis nunc sed blandit libero volutpat. 
-			Senectus et netus et malesuada.</p>
-			
-			<kbd>tommy = Turtle()</kbd>
 			</div>
 			
 			<div style="width: 50%; margin: 50px;">

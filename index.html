@@ -69,6 +69,7 @@
     </style>
     
 	<script>
+		
 	function myFunction() {
 	  setTimeout(vid, 3000 * 20 );
 
@@ -97,13 +98,15 @@ function ifram() {
 		<span class="close">&times;</span>
     </div>
 	<div style='height: 100%; display: flex; justify-content: center; align-items: center;'>
-		<iframe width='80%' height='80%' src='https://www.youtube.com/embed/bXesoopsWGE' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+		<iframe id='frame' width='80%' height='80%' src='' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
 	</div>
   <!--/div-->
 
 </div>
 
 <script>
+var videos = ['https://www.youtube.com/embed/pGCPyTtfK5k', 'https://www.youtube.com/embed/k9h7ZT9S4g4', 'https://www.youtube.com/embed/yjo6ZC1dGkc'];
+
 var modal = document.getElementById("myModal");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -115,9 +118,16 @@ span.onclick = function() {
 }
 
 function vid() {
-  modal.style.display = "block";
+	document.getElementById('frame').src = videos[Math.floor(Math.random() * 3)];
+	
+	setTimeout(display_frame, 100 );
   //alertFunc();
 }
+
+function display_frame() {
+  modal.style.display = "block";
+	}
+	
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
